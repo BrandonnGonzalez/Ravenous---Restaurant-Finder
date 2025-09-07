@@ -1,71 +1,181 @@
-# Getting Started with Create React App
+# Ravenous - Yelp Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Developed by Brandon Gonzalez**
 
-## Available Scripts
+A React-based web application that mimics the core functionality of Yelp, allowing users to search for restaurants and view business information in a clean, modern interface.
 
-In the project directory, you can run:
+## 🎯 Purpose
 
-### `npm start`
+Ravenous is a restaurant discovery application designed to help users find and explore local dining options. The project demonstrates modern React development practices, responsive web design, and component-based architecture. It serves as a foundation for building a full-featured restaurant review and discovery platform.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React** - Frontend JavaScript library for building user interfaces
+- **CSS3** - Styling with modern features including Flexbox, Grid, and responsive design
+- **JavaScript (ES6+)** - Modern JavaScript features including arrow functions, destructuring, and modules
+- **HTML5** - Semantic markup structure
+- **Node.js & npm** - Package management and development tools
+- **Create React App** - Development environment and build tooling
 
-### `npm test`
+## ✨ Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Current Features
 
-### `npm run build`
+- **🔍 Advanced Search Interface**
+  - Search by business name/type
+  - Location-based filtering
+  - Sort options: Best Match, Highest Rated, Most Reviewed
+  - Interactive sort selection with visual feedback
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **🏪 Business Display**
+  - Grid layout of restaurant cards
+  - Business images with hover effects
+  - Comprehensive business information:
+    - Name and category
+    - Full address details
+    - Star ratings
+    - Review counts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **📱 Responsive Design**
+  - Mobile-first approach
+  - Adaptive layouts for all screen sizes
+  - Touch-friendly interface elements
+  - Optimized for both desktop and mobile experiences
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **🎨 Modern UI/UX**
+  - Clean, professional design
+  - Gradient backgrounds and smooth transitions
+  - Hover effects and interactive elements
+  - Consistent color scheme and typography
 
-### `npm run eject`
+### Sample Data
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application currently displays sample restaurants including:
+- MarginOtto Pizzeria (Italian cuisine)
+- Burger King (Fast Food)
+- Los Pollos Hermanos (Mexican cuisine)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🏗️ Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+src/
+├── components/
+│   ├── Business.jsx          # Individual business card component
+│   ├── Business.css          # Business card styling
+│   ├── BusinessList.jsx      # Container for business cards
+│   ├── BusinessList.css      # Business list layout
+│   ├── SearchBar.jsx         # Search interface component
+│   └── SearchBar.css         # Search bar styling
+├── App.js                    # Main application component
+├── App.css                   # Global application styles
+├── index.js                  # Application entry point
+└── index.css                 # Base styles
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Getting Started
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Node.js (version 14 or higher)
+- npm or yarn package manager
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation
 
-### Code Splitting
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd prod-ravenous
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Analyzing the Bundle Size
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Open your browser and navigate to `http://localhost:3000`
 
-### Making a Progressive Web App
+### Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (irreversible)
 
-### Advanced Configuration
+## 🔮 Future Work
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Short-term Enhancements
 
-### Deployment
+- **🔌 API Integration**
+  - Connect to Yelp Fusion API or similar service
+  - Real-time business data fetching
+  - Dynamic search results based on user input
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **📍 Geolocation Features**
+  - Auto-detect user location
+  - Distance-based sorting
+  - Map integration for business locations
 
-### `npm run build` fails to minify
+- **⭐ Enhanced Business Details**
+  - Detailed business pages
+  - Photo galleries
+  - Operating hours and contact information
+  - Price range indicators
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Ravenous---Restaurant-Finder
+### Medium-term Goals
+
+- **👤 User Features**
+  - User authentication and profiles
+  - Favorite businesses functionality
+  - Personal review submission
+  - Rating system
+
+- **🔍 Advanced Search**
+  - Filter by cuisine type, price range, ratings
+  - Advanced location search with autocomplete
+  - Search history and saved searches
+
+- **📱 Progressive Web App (PWA)**
+  - Offline functionality
+  - Push notifications for deals/updates
+  - App-like mobile experience
+
+### Long-term Vision
+
+- **🤖 AI-Powered Recommendations**
+  - Personalized restaurant suggestions
+  - Machine learning-based preference analysis
+  - Smart filtering based on user behavior
+
+- **🌐 Social Features**
+  - User reviews and photo sharing
+  - Social media integration
+  - Friend recommendations and activity feeds
+
+- **💼 Business Dashboard**
+  - Business owner portal
+  - Analytics and insights
+  - Menu management and updates
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👨‍💻 Developer
+
+**Brandon Gonzalez**
+- GitHub: [Your GitHub Profile]
+- LinkedIn: [Your LinkedIn Profile]
+- Email: [Your Email]
+
+---
+
+*Built with ❤️ using React*
