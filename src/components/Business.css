@@ -1,0 +1,108 @@
+.Business {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 16.66rem;
+  margin: 0 0.5rem 2.3rem 0.5rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.Business:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+  height: 16.66rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+.Business h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #d32323;
+}
+
+.Business-information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Business-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.Business-address p {
+  margin: 0;
+  line-height: 1;
+  font-size: 0.88rem;
+  color: #666;
+}
+
+.Business-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.Business-reviews h3 {
+  color: #CCA353;
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.Business-reviews .rating {
+  font-size: 0.88rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.Business-reviews p {
+  font-size: 0.88rem;
+  margin: 0;
+  line-height: 1;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .Business {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  
+  .image-container {
+    height: 12rem;
+  }
+  
+  .Business-information {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .Business-reviews {
+    text-align: left;
+  }
+}

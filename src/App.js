@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import SearchBar from './components/SearchBar';
+import BusinessList from './components/BusinessList';
 
 function App() {
+  const handleSearch = (searchData) => {
+    console.log('Search data:', searchData);
+    // This is where you would typically make an API call
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1> Developed by Brandon Gonzalez</h1>
+        <h1>Ravenous - Yelp Clone</h1>
       </header>
+      <SearchBar onSearch={handleSearch} />
+      <BusinessList />
     </div>
   );
 }
