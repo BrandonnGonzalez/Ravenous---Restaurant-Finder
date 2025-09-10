@@ -2,48 +2,36 @@ import React from "react";
 import "./BusinessList.css";
 import Business from "./Business";
 
-const businesses = [
-  {
-    imageSrc:
-      "https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg",
-    name: "MarginOtto Pizzeria",
-    address: "1010 Paddington Way",
-    city: "Bordertown",
-    state: "NY",
-    zipCode: "10101",
-    category: "Italian",
-    rating: 4.5,
-    reviewCount: 90,
-  },
-  {
-    imageSrc:
-      "https://cdn.prod.website-files.com/631b4b4e277091ef01450237/6398f26cb77dc209f3628aeb_Whopper.png",
-    name: "Burger King",
-    address: "1453 Morton Ave",
-    city: "Los Angeles",
-    state: "CA",
-    zipCode: "90001",
-    category: "Fast Food",
-    rating: 4.0,
-    reviewCount: 100,
-  },
-  {
-    imageSrc:
-      "https://upload.wikimedia.org/wikipedia/en/a/ae/Los_Pollos_Hermanos_logo.png",
-    name: "Los Pollos Hermanos",
-    address: "1234 Main St",
-    city: "New York",
-    state: "NY",
-    zipCode: "10001",
-    category: "Mexican",
-    rating: 3.7,
-    reviewCount: 57,
-  },
-];
+const BusinessList = ({ businesses, isSearching, hasSearched }) => {
+  if (isSearching) {
+    return (
+      <div className="BusinessList">
+        <div className="loading-message">
+          <h3>🔍 Searching for businesses...</h3>
+          <div className="loading-spinner"></div>
+        </div>
+      </div>
+    );
+  }
 
-const BusinessList = () => {
+  if (hasSearched && businesses.length === 0) {
+    return (
+      <div className="BusinessList">
+        <div className="no-results-message">
+          <h3>😔 No businesses found</h3>
+          <p>Try adjusting your search terms or location.</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="BusinessList">
+      {hasSearched && (
+        <div className="search-results-header">
+          <p>Found {businesses.length} business{businesses.length !== 1 ? 'es' : ''}</p>
+        </div>
+      )}
       {businesses.map((biz) => (
         <Business key={`${biz.name}-${biz.address}`} business={biz} />
       ))}

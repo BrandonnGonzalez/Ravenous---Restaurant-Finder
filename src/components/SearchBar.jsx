@@ -7,7 +7,7 @@ const sortByOptions = {
   "Most Reviewed": "review_count",
 };
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, isSearching }) => {
   const [term, setTerm] = useState("");
   const [location, setLocation] = useState("");
   const [sortBy, setSortBy] = useState("best_match");
@@ -31,7 +31,7 @@ const SearchBar = ({ onSearch }) => {
   // used when user clicks "Let's Go" button
   const handleSearch = (e) => {
     e.preventDefault();
-    if (onSearch) {
+    if (onSearch && !isSearching) {
       onSearch({ term, location, sortBy });
     }
   };
@@ -65,7 +65,9 @@ const SearchBar = ({ onSearch }) => {
         <input placeholder="Where?" value={location} onChange={handleLocationChange} />
       </div>
       <div className="SearchBar-submit">
-        <button onClick={handleSearch}>Let's Go</button>
+        <button onClick={handleSearch} disabled={isSearching} className={isSearching ? 'searching' : ''}>
+          {isSearching ? 'Searching...' : "Let's Go"}
+        </button>
       </div>
     </div>
   );
